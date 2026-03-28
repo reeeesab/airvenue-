@@ -25,9 +25,9 @@ export default function Home() {
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=2000" 
+            src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=2000" 
             alt="Hero Background"
-            className="w-full h-full object-cover brightness-[0.5]"
+            className="w-full h-full object-cover brightness-[0.4]"
           />
         </div>
         
@@ -36,7 +36,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-2xl tracking-tight"
+            className="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] tracking-tight"
           >
             Find the perfect space for <br />
             <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">your next big moment</span>
