@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
 import VenueGrid from "@/components/VenueGrid";
 import { getVenues, Venue } from "./actions";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 
 export default function Home() {
   const [venues, setVenues] = useState<Venue[]>([]);
@@ -56,7 +56,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <SearchBar />
+            <Suspense fallback={<div className="h-16 w-full max-w-4xl mx-auto bg-white/20 animate-pulse rounded-full" />}>
+              <SearchBar />
+            </Suspense>
           </motion.div>
         </div>
       </section>

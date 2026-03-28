@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
 import VenueGrid from "@/components/VenueGrid";
 import { getVenues, Venue } from "../actions";
-import { useEffect, useState, use } from "react";
+import { useEffect, useState, use, Suspense } from "react";
 
 export default function ResultsPage({
   searchParams,
@@ -34,7 +34,9 @@ export default function ResultsPage({
       
       <div className="bg-white border-b py-6 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SearchBar />
+          <Suspense fallback={<div className="h-12 w-full bg-gray-100 animate-pulse rounded-full" />}>
+            <SearchBar />
+          </Suspense>
         </div>
       </div>
 
